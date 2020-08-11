@@ -15,18 +15,19 @@ Section 2.1 talked about the two data sources, one is the stock-related news dat
 - Time Effect of News counted by Novelty (Numerical Data)
 - Time Effect of News counted by Trading Volume (Numerical Data)
 
-2. Stock Price Data downloaded from WRDS (Compustat - Capital IQ) , using the ticker derived from the cleaned News Dataset. The features of interest include:
+2. Stock Price Data downloaded from WRDS (Compustat - Capital IQ)(https://wrds-www.wharton.upenn.edu/) , using the ticker derived from the cleaned News Dataset. The features of interest include:
 - Date
 - Asset Code (Ticker)
 - Volume
 - Open Price
 - Close Price
+
 From these variables, I calculated the following stock returns for stock return prediction:
-returnsClosePrev1 - 1-day stock return calculated by closing price
-returnsOpenPrev1 - 1-day stock return calculated by open price
-returnsClosePrev10 - 10-day stock return calculated by closing price
-returnsOpenPrev10 - 10-day stock return calculated by open price
-returnsOpenNext10 - 10-day forward stock return calculated by open price - this will be the target variable for the regression model
+- returnsClosePrev1 - 1-day stock return calculated by closing price
+- returnsOpenPrev1 - 1-day stock return calculated by open price
+- returnsClosePrev10 - 10-day stock return calculated by closing price
+- returnsOpenPrev10 - 10-day stock return calculated by open price
+- returnsOpenNext10 - 10-day forward stock return calculated by open price - this will be the target variable for the regression model
 
 ## Model
 Section 2.2 talked about the model used, which is a regression NN model with a few Dense Layers, BatchNormalization Layers, and Dropout Layers. Also, I used an embedding layer to process a unique feature among the others, `assetCode`. It is believed that this layer is important for the model to distinguish one asset from another. The details of the model used can be found inside the notebook.
