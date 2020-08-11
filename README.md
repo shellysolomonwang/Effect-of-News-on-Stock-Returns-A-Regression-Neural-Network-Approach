@@ -29,4 +29,4 @@ returnsOpenPrev10 - 10-day stock return calculated by open price
 returnsOpenNext10 - 10-day forward stock return calculated by open price - this will be the target variable for the regression model
 
 # Model
-Section 2.2 talked about the model used, which is a regression NN model with a few Dense Layers, BatchNormalization Layers, and Dropout Layers. Also, I used an embedding layer to process a unique feature among the others, `assetCode`. It is believed that this layer is important for the model to distinguish one asset from another. The details of the model used can be found below.
+Section 2.2 talked about the model used, which is a regression NN model with a few Dense Layers, BatchNormalization Layers, and Dropout Layers. Also, I used an embedding layer to process a unique feature among the others, `assetCode`. It is believed that this layer is important for the model to distinguish one asset from another. The details of the model used can be found inside the notebook.
